@@ -12,7 +12,7 @@ class GoogleWikipediaMainTest extends GebSpec {
     to GoogleHomePage
 
     then:
-    at GoogleHomePage
+    waitFor { at GoogleHomePage }
 
     when:
     search.doSearch("test")
