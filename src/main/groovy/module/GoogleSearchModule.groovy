@@ -1,7 +1,6 @@
 package module
 
 import geb.Module
-import page.GoogleResultsPage
 
 class GoogleSearchModule extends Module {
   // a parameterised value set when the module is included
@@ -14,9 +13,7 @@ class GoogleSearchModule extends Module {
 
     // the search button declares that it takes us to the results page, and uses the
     // parameterised buttonName to define itself
-    button(to: GoogleResultsPage) {
-      $("button", name: buttonName)
-    }
+    button{ $("button", name: buttonName) }
   }
   public void doSearch(String keyword){
     try {
