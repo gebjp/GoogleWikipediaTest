@@ -24,7 +24,7 @@ class GoogleWikipediaMainTest extends GebSpec {
     search.doSearch("wikipedia")
 
     then:
-    waitFor { at GoogleResultsPage }
+    waitFor { firstResultLink.text() == "Wikipedia" }
 
     when:
     firstResultLink.click()

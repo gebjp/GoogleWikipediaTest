@@ -9,6 +9,6 @@ class GoogleResultsPage extends Page {
   static content = {
     // reuse our previously defined module
     search{ module GoogleSearchModule, buttonName: "btnG" }
-    firstResultLink(wait:true){ $("li" , class:"g" , 0).$("a")}
+    firstResultLink{ $("li" , class:"g" , 0).$("a")}
   }
 }
